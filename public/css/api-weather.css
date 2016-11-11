@@ -1,0 +1,15 @@
+.api-weather-column{
+display:inline-block;
+}
+
+#api-weather-temperature{
+    margin-right: 15px;
+    display:block;
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 767px) {
+    #api-weather-temperature{
+        font-size: 25px;
+    }
+}
