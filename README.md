@@ -1,12 +1,15 @@
-API Weather
+#API Weather
 
 A simple wordpress plugin that provides shortcode for getting the current weather conditions. This uses AccuWeather’s API. 
+
+# Screenshots
+![Alt text](/screenshots/api-weather.png?raw=true "Example Shortcode Usage")
 
 # Installation Instructions
 
 ## Copy the "api-weather" folder into your site’s plugin directory.
 
-Typically this is: "/wp-content/plugins/".
+Typically this is: "/wp-content/plugins/".  You may want to remove the "screenshots" directory beforehand. 
 
 ## Create an AccuWeather API Key.
 
@@ -35,35 +38,35 @@ This plugin provides one shortcode to render a location’s current conditions. 
 ### Location
 
 By default, this plugin uses the location of "Nashville, TN". You can change that location with by using the location attribute like this:
-
+```
 [api_weather location="New Orleans, LA”]
-
+```
 ### Using the User’s Location
 
 If you’d like your to personalize the current condition weather for each visitor, then set the following attribute like this:
-
+```
 [api_weather use_user_location="1”]
-
+```
 This will find the user’s location based on IP address.  
 
 **Note:** This feature takes precedence over the basic "location" field. So if a user in Seattle and you’ve set up the shortcode like this:  
-
+```
 [api_weather use_user_location="1” location=”Virginia Beach, VI”]
-
+```
 The plugin would render the weather for Seattle.
 
 ### Using a Weather Icon
 
 By default, this plugin only includes the temperature and a word describing the weather ("Sunny", “Partly Cloudy”).  To include a matching weather icon, do the following:
-
+```
 [api_weather include_icon="1”]
-
+```
 ### Metric or Imperial Units
 
 This plugin uses the imperial (fahrenheit) system by default, but you can switch it by using the following attribute:
-
+```
 [api_weather units="metric”]
-
+```
 # Plugin Architecture
 
 ## Api-weather.php
