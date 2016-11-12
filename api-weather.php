@@ -28,7 +28,7 @@ require_once plugin_dir_path( __FILE__ ) . 'includes/class-api-weather.php';
 $plugin_dir_url_root = plugin_dir_url( __FILE__ );
 
 // instantiate plugin's class
-$ApiWeather = new ApiWeather( new CurlWrapper( ), $plugin_dir_url_root );
+$ApiWeather = new ApiWeather( new CurlWrapper( ), $plugin_dir_url_root, $accuweather_api_key );
 
 //make the class globally availalble.
 $GLOBALS['api_weather'] = $ApiWeather;
